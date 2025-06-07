@@ -1,0 +1,31 @@
+{
+	"name": "ClaudeCodedev",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "."
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {},
+		"ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
+	},
+	"mounts":[
+		{
+			"source": "${localWorkspaceFolder}/work",
+			"target": "${containerWorkspaceFolder}",
+			"type": "bind"
+		}
+	],
+	"remoteUser": "klab",
+	"workspaceFolder": "/home/klab/work",
+	"postCreateCommand": "/home/klab/work/scripts/changebash.sh",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"firejump.frame-indent-rainbow",// Frame Indent Rainbow
+				"DavidAnson.vscode-markdownlint",// Markdown Lint
+				"eamodio.gitlens",// GitLens
+				"ms-edgedevtools.vscode-edge-devtools"	// Edge DevTools
+			]
+		}
+	}
+}
