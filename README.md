@@ -1,2 +1,3 @@
 # Claudecodedev
 devcontaierを使ってClaudecodeの環境を作る
+ユーザー名は任意に変更する
